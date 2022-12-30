@@ -1,0 +1,38 @@
+//variables-------------------------------------------
+$header-C:      #666;
+$header-Fsize:  .8rem;
+$sub-header-C:  #f5f5f5;
+$MainBG-C:      white;
+$font-C:        #666;
+$font-SZ-header:.6rem;
+$butt-color:   #8dbc01;
+$nav-color:    #0099ff;
+$pagewidth:     600px;
+$footerBG-C:    #333;
+$footer-headC:  #ccc;
+$footer-C:      #777;
+$footer-Fsize:  .5rem;
+
+// mixins
+@mixin button {
+    font-size: .5rem;
+    color: $nav-color;
+    text-transform: uppercase;
+    padding: .4rem .9rem;
+    text-decoration: none;
+    &:hover,
+    &:active{
+        background-color: $nav-color;
+        color: white;
+    }
+}
+@mixin clearfix{
+    &:before,
+    &:after{
+        content:" " ;
+        display: table; 
+        }
+    &::after{
+        clear: both;
+    }
+}

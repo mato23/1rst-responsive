@@ -1,0 +1,115 @@
+@import "_variaMixi";
+
+//pages----------------------------------------------- 
+$pages:(
+    "homePage",
+    "demoPage"
+);
+
+//home subheader --------------------------------------------
+
+.homePage .subheader{
+    @include clearfix();
+    h1{
+        margin:0;
+    }
+    article{
+        float: left;
+        max-width: 35%;
+    }
+    img{
+        width: 60%;
+        float: right;
+        box-shadow: .2px .2px 2px .1px;
+        border-radius: .2em;
+    }
+    p{
+        font-size: $font-SZ-header;
+        color: #696969;
+    }
+    a{
+        @include button();
+        background-color: $nav-color;
+        color: white;
+        border-radius: .2rem;
+        margin-bottom: .8rem;
+        box-sizing: border-box;
+        &:hover,
+        &:active {
+            background-color: $butt-color;
+        }
+    }
+} 
+
+.homePage{
+    section{
+        max-width:$pagewidth;
+        margin: 0 auto;
+        @include clearfix();
+        article {
+            margin-right:5%;
+        }
+    }
+    article{
+        float: left;
+        width: 30%;
+        margin-bottom: 5%;
+        color: $font-C;
+        font-size: $font-SZ-header;
+        img{
+            width: 100%;
+        } 
+    }
+    #item3{
+        margin-right: 0;
+    }
+}
+
+// demopage --------------------------------------
+.demoPage{
+    box-sizing: border-box;
+    font-size: $font-SZ-header;
+        a{
+            text-decoration: none;
+            color: $nav-color;
+        }
+    }
+    article{
+        width: 65%;
+    }
+
+    H2,H3,H4,H5,H6{
+        text-transform: uppercase;
+    }
+    H3{
+        font-weight: lighter;
+    }
+aside{
+    float: right;
+    width: 30%;
+    .active{
+        background-color: $nav-color;
+        color: white;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: .3rem;
+    }
+    a{
+        @include button();
+        display: block;
+        background-color: #e6e6e6;
+        line-height: 1rem;
+        &:hover,
+        &:active{
+            background-color: $nav-color;
+            color: $sub-header-C;
+            cursor: pointer;
+        }
+    }
+}

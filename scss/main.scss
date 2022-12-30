@@ -1,0 +1,86 @@
+// Imports
+@import "_normalize"; 
+@import "_pages";
+@import "_mediaQ";
+@import "_variaMixi";
+
+
+
+// loops----------------------------------------------
+    @each $page in $pages{
+        .#{$page} {
+
+            body{
+                height: 100vh;
+                padding: 0 20%;
+                color: $font-C;
+            }
+            header{
+                max-width: $pagewidth;
+                margin: 0 auto;
+                background: $MainBG-C;
+                font-size: $header-Fsize;
+                @include clearfix();
+                nav{
+                    box-sizing: border-box;
+                    float: right;
+                    ul{
+                        padding: 0;
+                        list-style: none;
+                    }
+                    li{
+                        display: inline;
+                    }
+                    .active{
+                        background-color: $nav-color;
+                        color:white;
+                    }
+                    a{
+                        @include button()
+                    }
+                }
+                .mainlogo{
+                    float: left;
+                    width: 6rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .subheader{
+                background: $sub-header-C;
+                border-top:1px solid darken($sub-header-C, $amount: 10);
+                border-bottom:1px solid darken($sub-header-C, $amount: 10);
+                h1{
+                    font-size: .9rem;
+                    font-weight: normal;
+                }
+            }
+            .row{
+                @include clearfix();
+                max-width: $pagewidth;
+                margin: .5rem auto;
+            }
+            footer{
+                background-color: $footerBG-C;
+                color: $footer-C;
+                font-size: $footer-Fsize;
+                padding: .4rem;
+                position:fixed;
+                width: 100%;
+                bottom: 0px;
+                h6{
+                    color: $footer-headC;
+                    text-transform: uppercase;
+                }
+                a{
+                    color: $footer-C;
+                }
+            }
+            @media screen and (max-width:620px) {
+                section{
+                    background-color: aqua;
+                }
+            }
+        }
+    }
